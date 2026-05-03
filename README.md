@@ -1,5 +1,7 @@
 # db-mastery
 
+[![CI](https://github.com/Venkatesanrs/db-mastery/actions/workflows/ci.yml/badge.svg)](https://github.com/Venkatesanrs/db-mastery/actions/workflows/ci.yml)
+
 A multi-module Gradle project for deep-diving into database technologies with Spring Boot.
 Each module is a self-contained Spring Boot app targeting a specific database — run them independently,
 compare patterns, and build POCs without one DB bleeding into another.
@@ -66,8 +68,8 @@ Tests use Testcontainers — Docker must be running.
 ## Adding a New DB Module
 
 1. Create a new folder: `mkdir -p newdb/src/main/java/com/dbmastery/newdb`
-2. Add a `build.gradle.kts` with the relevant dependencies
-3. Register it in `settings.gradle.kts`: add `"newdb"` to the `include(...)` list
+2. Add a `build.gradle` with the relevant dependencies
+3. Register it in `settings.gradle`: add `'newdb'` to the `include` list
 4. Add `docker-compose.yml` for the database
 5. Add `application.yml` with connection config (use a unique `server.port`)
 
