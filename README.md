@@ -19,7 +19,7 @@ db-mastery/
 
 ## Prerequisites
 
-- Java 21+
+- Java 25+
 - Docker (for running databases locally)
 - IntelliJ IDEA (recommended)
 
@@ -72,6 +72,22 @@ Tests use Testcontainers — Docker must be running.
 3. Register it in `settings.gradle`: add `'newdb'` to the `include` list
 4. Add `docker-compose.yml` for the database
 5. Add `application.yml` with connection config (use a unique `server.port`)
+
+## CI
+
+```bash
+# Authenticate (one-time)
+gh auth login
+
+# List recent runs
+gh run list --repo Venkatesanrs/db-mastery
+
+# Watch the latest run live
+gh run watch --repo Venkatesanrs/db-mastery
+
+# View logs for the latest run
+gh run view --repo Venkatesanrs/db-mastery --log
+```
 
 ## Module Port Map
 
